@@ -52,7 +52,7 @@ def render():
     ##  Author & Credits
     - **Developed by:** *Rahul Ahuja(B23CH1037) , Anmol Yadav(B23CS1004)*  
     - **Institution:** *Indian Institute of Technology Jodhpur*  
-    - **GitHub:** https://github.com/OmChandraSharma/Sentiment_Analysis.git 
+    - **GitHub:** https://github.com/RahulAhuja07/sentiment-analysis.git 
  
 
     Special thanks to open-source contributors and datasets used for training and testing.

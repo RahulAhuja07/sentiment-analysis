@@ -1,6 +1,6 @@
 # Sentiment Analysis Using Classical Machine Learning Techniques
 
-**Live App**: [Streamlit Demo](https://omchandrasharma-sentiment-analysis-sentiment-appapp-p762tr.streamlit.app/)  
+**Live App**: [Open the Sentiment Analysis App](https://sentiment-analysis-rahul-ahuja.streamlit.app/)
 **Dataset**: [Kaggle Dataset](https://www.kaggle.com/datasets/abhi8923shriv/sentiment-analysis-dataset/data)
 
 ---
@@ -31,7 +31,7 @@ This project presents a unified sentiment analysis platform built using classica
 ## How to Use the Web App
 
 1. Open the app:  
-   [https://omchandrasharma-sentiment-analysis-sentiment-appapp-p762tr.streamlit.app/](https://omchandrasharma-sentiment-analysis-sentiment-appapp-p762tr.streamlit.app/)
+   [Sentiment Analysis App](https://sentiment-analysis-rahul-ahuja.streamlit.app/)
 
 2. In the left sidebar, select any model (e.g., Logistic Regression, KNN, Naive Bayes)
 
@@ -47,22 +47,29 @@ This project presents a unified sentiment analysis platform built using classica
 
 ## Folder Structure
 
-.
-├── ANN/ # Artificial Neural Network model, graphs & analysis
-├── backend/ # FastAPI backend for model inference
-├── clustering/ # Clustering algorithms and visualizations
-├── decision_tree/ # Decision Tree implementation and analysis
-├── KNN/ # K-Nearest Neighbors model and plots
-├── linear_regression/ # Linear Regression model, graphs & performance
-├── logistic_regression/ # Logistic Regression implementation & visuals
-├── naive_bayes/ # Naive Bayes model for classification & sentiment
-├── sentiment_app/ # Sentiment analysis logic and app code
-├── svm/ # Support Vector Machine implementation and evaluation
-├── .DS_Store
+```text
+sentiment-analysis/
+├── .devcontainer/           # Development environment configuration
+├── ANN/                     # Neural network implementation and results
+├── backend/                 # FastAPI prediction service
+├── clustering/              # Clustering algorithms and results
+├── decision_tree/           # Decision Tree and Random Forest analysis
+├── KNN/                     # K-Nearest Neighbors implementation and results
+├── linear_regression/       # Linear Regression implementation and results
+├── logistic_regression/     # Logistic Regression implementation and results
+├── naive_bayes/             # Naive Bayes implementation and results
+├── sentiment_app/           # Streamlit dashboard
+│   ├── app.py               # App entrypoint and navigation
+│   ├── photos_members/      # Team portraits
+│   ├── subpages/            # Home, model analysis, simulation, and About pages
+│   ├── utils/               # Preprocessing and model helpers
+│   └── requirements.txt     # Dashboard dependencies
+├── svm/                     # Support Vector Machine implementation and results
 ├── .gitattributes
+├── .gitignore
 ├── README.md
-├── Sentiment Analysis Dataset Report.pdf
-├── SentimentClassificationReport.pdf
+└── Sentiment Analysis Dataset Report.pdf
+```
 
 ## Installation
 
@@ -79,8 +86,8 @@ python -m streamlit run sentiment_app/app.py
 2. Sign in at [Streamlit Community Cloud](https://share.streamlit.io/) using your GitHub account, then select **Create app** and **Yup, I have an app**.
 3. Set the repository to `RahulAhuja07/sentiment-analysis`, select the branch containing your uploaded files, and set the main file path to `sentiment_app/app.py`.
 4. In **Advanced settings**, select **Python 3.11** to match this project's existing dependency pins.
-5. Choose an available app subdomain, such as `rahul-ahuja-sentiment-analysis`, and deploy. The suggested name is subject to availability.
-6. Open the new app and check its pages, your portrait, graphs, and **Live Simulation** predictions. Once verified, replace both old Live App URLs in this README with the actual deployed URL.
+5. Choose an available app subdomain and deploy. This project's live app uses `sentiment-analysis-rahul-ahuja`.
+6. Open the deployed app and check its pages, your portrait, graphs, and **Live Simulation** predictions.
 
 The current prediction page calls the Cloud Run API configured in `sentiment_app/subpages/simulation.py`. Graphs also load from the existing `sentimentann` Google Cloud Storage bucket. Publishing a new Streamlit app does not transfer these services; confirm that they remain available, or migrate them and update the corresponding URLs. Trained models are not included in this project folder.
 
