@@ -1,6 +1,6 @@
 # Sentiment Analysis Using Classical Machine Learning Techniques
 
-**Live App**: [Open the Sentiment Analysis App](https://sentiment-analysis-rahul-ahuja.streamlit.app/)
+**Live App**: [App](https://sentiment-analysis-rahul-ahuja.streamlit.app/)
 **Dataset**: [Kaggle Dataset](https://www.kaggle.com/datasets/abhi8923shriv/sentiment-analysis-dataset/data)
 
 ---
@@ -79,16 +79,3 @@ Use Python 3.11 and run these commands from the project root:
 python -m pip install -r sentiment_app/requirements.txt
 python -m streamlit run sentiment_app/app.py
 ```
-
-## Deploy Your Copy on Streamlit Community Cloud
-
-1. Upload the latest project files to `RahulAhuja07/sentiment-analysis` on GitHub, including `sentiment_app/photos_members/Rahul.jpeg` and `sentiment_app/requirements.txt`.
-2. Sign in at [Streamlit Community Cloud](https://share.streamlit.io/) using your GitHub account, then select **Create app** and **Yup, I have an app**.
-3. Set the repository to `RahulAhuja07/sentiment-analysis`, select the branch containing your uploaded files, and set the main file path to `sentiment_app/app.py`.
-4. In **Advanced settings**, select **Python 3.11** to match this project's existing dependency pins.
-5. Choose an available app subdomain and deploy. This project's live app uses `sentiment-analysis-rahul-ahuja`.
-6. Open the deployed app and check its pages, your portrait, graphs, and **Live Simulation** predictions.
-
-The current prediction page calls the Cloud Run API configured in `sentiment_app/subpages/simulation.py`. Graphs also load from the existing `sentimentann` Google Cloud Storage bucket. Publishing a new Streamlit app does not transfer these services; confirm that they remain available, or migrate them and update the corresponding URLs. Trained models are not included in this project folder.
-
-See the [official Streamlit deployment guide](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/deploy) for the deployment form and settings.
